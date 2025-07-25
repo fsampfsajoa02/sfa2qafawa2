@@ -1,0 +1,281 @@
+#copyNoteID {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background-color: green;
+    cursor: pointer;
+}
+
+input[type=text] {
+    position: fixed;
+    top: 0;
+    padding: 10px !important;
+    background-color: #222;
+    color: white;
+    border: none;
+}
+
+input[type="text"]:focus {
+    background-color: #222;
+}
+
+#pageid,
+#rlmainmenu,
+#rlnomenu1,
+#rlsubmenu,
+#rlnomenu2 {
+    display: none;
+}
+
+.awesomplete {
+    position: fixed;
+
+}
+
+.awesomplete>ul {
+    border: none;
+}
+
+.awesomplete>ul>li {
+    background-color: black;
+    border: none;
+}
+
+.awesomeplete li mark {
+    background-color: white;
+}
+
+.image-list {
+    padding-top: 30px;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+span.thumb {
+    height: 400px;
+}
+
+.thumb {
+    min-height: 350px;
+    min-width: 300px;
+}
+
+.thumb img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    border: 3px solid #111 !important;
+}
+
+
+.content #image {
+    min-height: 90vh !important;
+    max-height: 90vh !important;
+    width: 100% !important;
+    object-fit: contain;
+}
+
+#note-count {
+    display: none;
+}
+
+#right-col h4,
+#paginator {
+    display: none
+}
+
+#site-title {
+    background: none
+}
+
+
+li.current-page {
+    background-color: #222 !important;
+}
+
+.status-notice {
+    display: none !important
+}
+
+
+
+/*links*/
+#site-title a {
+    color: green
+}
+
+.flat-list a {
+    color: lightblue;
+}
+
+.current-page a {
+    color: lightgreen !important;
+}
+
+#subnavbar,
+.flat-list li:nth-child(1n+3) a {
+    display: none
+}
+
+
+#tag-sidebar li {
+    color: red !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+.pagination a {
+
+    color: lightblue !important;
+}
+
+.pagination a:visited {
+    filter: blur(5px) !important;
+    color: red !important
+}
+
+.pagination a:hover {
+    color: green !important
+}
+
+/*catagories*/
+.sidebar h4,
+h5,
+h6 {
+    color: white !important;
+}
+
+.sidebar {
+    background-color: unset;
+}
+
+.tag-type-general a {
+    text-align: center;
+    color: lightblue !important;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+.tag a {
+    padding: 2%;
+    margin: 3%;
+}
+
+
+.tag a:hover {
+    border: 1px solid #666;
+    ;
+    padding: 5%;
+}
+
+li.tag-type-general:hover {
+    font-size: large;
+    background-color: #222 !important;
+    padding: 2%;
+    margin: 3%;
+}
+
+#tag-sidebar span {
+    color: white !important;
+}
+
+
+
+li span {
+    display: list-item;
+    text-align: right
+}
+
+
+
+a {
+    color: #00c3ff !important;
+}
+
+.tag-type-copyright>a {
+    color: #a0a !important;
+}
+
+.tag-type-character>a {
+    color: #0a0 !important;
+}
+
+.tag-type-artist>a,
+a.tag-type-artist {
+    color: #a00 !important;
+}
+
+div.sidebar {
+    min-width: 250px !important
+}
+
+#tag-sidebar+div {
+    display: none !important;
+}
+
+
+div#header ul#navbar li.current-page {
+    background: #333 !important;
+    border-radius: 10px;
+}
+
+div#header ul#navbar li.current-page a {
+    color: #00c3ff !important;
+}
+
+html,
+body,
+#body,
+#header,
+#navbar,
+#subnavbar,
+#content,
+#post-list,
+#sidebar,
+#content,
+#sidebarRight,
+#sidebarLeft,
+#notice,
+#long-notice,
+#static-index {
+    background: #111 !important;
+    background-color: #111 !important;
+    background-image: none !important;
+    color: white;
+}
+
+* {
+    --c-bg: #111;
+}
+
+
+img[src*="r34chibi"],
+img[src*="r34_doll"] {
+    display: none;
+}
+
+
+
+a:visited img {
+    border: 5px solid red !important;
+}
+
+#paginator {
+    padding-bottom: 500px !important
+}
+
+
+
+a:visited {
+    color: #ff0000 !important;
+    border: 2px solid #ff0000 !important;
+}
+
+img a:visited {
+    color: #ff0000 !important;
+    border: 2px solid #ff0000 !important;
+}
