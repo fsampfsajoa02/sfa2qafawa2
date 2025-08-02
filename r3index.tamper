@@ -10,38 +10,47 @@
 // @run-at       document-start
 // ==/UserScript==
 
+// CSS file = https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.css
+// JS file = https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.js
+// HTML file = https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.html
+
+
+// Inject JS first
 (function() {
     'use strict';
-
-    // Inject CSS
-    const cssUrl = "https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.css";
     GM_xmlhttpRequest({
         method: "GET",
-        url: cssUrl,
+        url: "https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.js",  // URL of the JS file
+        onload: function(response) {
+            const script = document.createElement('script');
+            script.textContent = response.responseText;
+            document.documentElement.appendChild(script);
+        }
+    });
+})();
+
+// Inject CSS
+(function() {
+    'use strict';
+    GM_xmlhttpRequest({
+        method: "GET",
+        url: "https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.css",  // URL of the CSS file
         onload: function(response) {
             GM_addStyle(response.responseText);
         }
     });
+})();
 
-    // Inject HTML
-    const htmlUrl = "https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.html";
+// Inject HTML
+(function() {
+    'use strict';
     GM_xmlhttpRequest({
         method: "GET",
-        url: htmlUrl,
+        url: "https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.html",  // URL of the HTML file
         onload: function(response) {
-            const container = document.createElement("div");
-            container.innerHTML = response.responseText;
-            container.style.position = "fixed";
-            container.style.top = "0";
-            container.style.left = "0";
-            container.style.zIndex = "9999";
-            document.body.appendChild(container);
+            const div = document.createElement('div');
+            div.innerHTML = response.responseText;
+            document.body.appendChild(div);
         }
     });
-
-    // Inject JavaScript
-   const script = document.createElement("script");
-script.src = "https://cdn.jsdelivr.net/gh/fsampfsajoa02/sfa2qafawa2/inject/r3/r3index.js";
-document.documentElement.appendChild(script);
-
 })();

@@ -9,6 +9,6 @@ function viewOriginal() {
     const image = document.getElementById("image");
     const src = image.src;
 
-    // Open the original image in a new tab
-    window.open(src, '_blank');
+    // Open the original image in the same tab
+    window.location.href = src;
 }
