@@ -4,6 +4,7 @@
 // @version      1.0
 // @description  Injects custom CSS, HTML, and JS into Google search results page
 // @match        https://rule34.xxx/index.php?page=post&s=list&tags=*
+// @match        https://rule34.xxx/index.php?page=post&s=view&id=*
 // @grant        GM_addStyle
 // @grant        GM_xmlhttpRequest
 // @run-at       document-start

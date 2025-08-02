@@ -283,3 +283,17 @@ img a:visited {
 #paginator{
     display: none !important;
 }
+
+/************************ View page */
+/* Original Button */
+#original-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
