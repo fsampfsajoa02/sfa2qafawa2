@@ -286,7 +286,7 @@ img a:visited {
 
 /************************ View page */
 /* Original Button */
-#original-button {
+#originalButtonID {
     position: fixed;
     top: 10px;
     right: 10px;
