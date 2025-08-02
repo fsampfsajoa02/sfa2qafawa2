@@ -1,0 +1,46 @@
+// ==UserScript==
+// @name         r3index
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Injects custom CSS, HTML, and JS into Google search results page
+// @match        https://rule34.xxx/index.php?page=post&s=list&tags=*
+// @grant        GM_addStyle
+// @grant        GM_xmlhttpRequest
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Inject CSS
+    const cssUrl = "https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.css";
+    GM_xmlhttpRequest({
+        method: "GET",
+        url: cssUrl,
+        onload: function(response) {
+            GM_addStyle(response.responseText);
+        }
+    });
+
+    // Inject HTML
+    const htmlUrl = "https://raw.githubusercontent.com/fsampfsajoa02/sfa2qafawa2/refs/heads/main/inject/r3/r3index.html";
+    GM_xmlhttpRequest({
+        method: "GET",
+        url: htmlUrl,
+        onload: function(response) {
+            const container = document.createElement("div");
+            container.innerHTML = response.responseText;
+            container.style.position = "fixed";
+            container.style.top = "0";
+            container.style.left = "0";
+            container.style.zIndex = "9999";
+            document.body.appendChild(container);
+        }
+    });
+
+    // Inject JavaScript
+   const script = document.createElement("script");
+script.src = "https://cdn.jsdelivr.net/gh/fsampfsajoa02/sfa2qafawa2/inject/r3/r3index.js";
+document.documentElement.appendChild(script);
+
+})();
